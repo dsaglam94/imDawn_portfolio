@@ -1,0 +1,100 @@
+.contact {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $color__white;
+    transition: background .2s linear;
+
+    &.dark__contact {
+        background-color: $color__black;
+    }
+
+
+    &__bg {
+        position: absolute;
+        bottom: 100px;
+        left: 0;
+        width: 70vw;
+        height: 55vh;
+        background-color: $color__accent;
+    }
+
+    &__items {
+        position: absolute;
+        bottom: 100px;
+        left: 15%;
+        height: 65vh;
+        width: 50vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin-left: auto;
+        margin-bottom: auto;
+        z-index: 2;
+
+        &--top {
+            text-align: right;
+        }
+
+        &--title {
+            font-size: 6rem;
+            color: $color__black;
+
+            &.dark__contact--title {
+                color: $color__white;
+            }
+        }
+
+        &--mail {
+            display: inline-block;
+            color: $color__black;
+            font-size: 3rem;
+            margin-top: 2rem;
+        }
+
+        &--bottom {
+            display: flex;
+            flex-direction: column;
+            text-align: right;
+            font-size: 1rem;
+            margin: 0 0 2rem;
+        }
+    }
+}
+
+.social-icons {
+    width: 20vw;
+    position: absolute;
+    bottom: 200px;
+    right: 65px;
+    gap: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+    .social__link {
+        color: $color__black;
+        text-shadow: 3px 3px 1px $color__primary;
+        transition: transform 1s ease;
+
+        &:hover {
+            color: $color__accent;
+            transform: translateY(-8px);
+        }
+
+        &.dark--social {
+            color: $color__white;
+            text-shadow: 3px 3px 1px $color__accent;
+
+            // &:hover {
+            //     color: $color__primary;
+            // }
+        }
+    }
+    
+}

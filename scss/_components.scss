@@ -1,0 +1,46 @@
+.divider {
+    width: 550px;
+    height: 5px;
+    background-color: $color__accent;
+    margin-block: 2em;
+}
+
+.divider__about {
+    width: 250px;
+}
+
+.chevron-down {
+    color: $color__accent;
+    position: absolute;
+    bottom: 25px;
+    right: 5%;
+    animation: scroll 3s infinite;
+    transition: scroll .25s ease-out;
+    cursor: pointer;
+}
+
+.chevron-up {
+    color: $color__primary;
+    position: absolute;
+    bottom: 25px;
+    left: 5%;
+    opacity: .8;
+    animation: scroll 3s infinite;
+    transition: scroll .25s ease-out;
+    cursor: pointer;
+}
+
+
+@keyframes scroll {
+    0% {
+        transform: translateY(-10px);
+    }
+
+    50% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-10px);
+    }
+}

@@ -1,0 +1,135 @@
+.works {
+    min-height: 100vh;
+    background-color: $color__white;
+    color: $color__black;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: background .2s linear;
+
+    &.dark__works {
+        background-color: $color__black;
+        color: $color__white;
+    }
+
+    &__title {
+        position: relative;
+
+        &--title {
+            margin-bottom: 3rem;
+            color: $color__black;
+            font-size: 2rem;
+            border-bottom: 3px solid $color__accent;
+            cursor: pointer;
+
+
+            &.dark__works--title {
+                color: $color__white;
+            }
+
+            &::before {
+                content: 'Click to see more works!';
+                position: absolute;
+                color: $color__accent;
+                background-color: $color__black;
+                padding: .75em 2em;
+                border-radius: 1rem;
+                font-size: 1rem;
+                font-weight: 400;
+                top: 5%;
+                right: 120%;
+                transform: scale(0);
+                transition: transform .3s ease;
+                transform-origin: right;
+                white-space: nowrap;
+                // opacity: .5;
+            }
+
+            &:hover::before {
+                transform: scale(1);
+            }
+        }
+    }
+
+    &__items,
+    &__items--secondary {
+        width: 90vw;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-items: center;
+        align-items: center;
+        position: relative;
+        gap: 2rem;
+        z-index: 2;
+
+        &--item {
+            width: 80%;
+            position: relative;
+            border-bottom: 5px solid $color__primary;
+            overflow: hidden;
+            box-shadow: 0px 15px 20px -5px rgba(0,0,0,0.75);
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: -100%;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                background-color: $color__black;
+                opacity: 0;
+                @include transition-ease;
+            }
+
+            &:hover {
+                &::after {
+                    top: 0;
+                    opacity: 0.6;
+                }
+                .works__btn {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    
+
+    &__btns {
+        position: absolute;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        z-index: 1;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        text-align: center;
+    }
+
+    &__btn {
+        opacity: 0;
+        color: $color__white;
+        @include transition-ease;
+
+        &:hover {
+            color: $color__accent;
+        }
+    }
+
+}
+
+.works__items--secondary {
+    position: relative;
+    top: 25.5%;
+    
+    .works__items--item {
+        border-bottom: 5px solid $color__accent;
+    }
+}
+
+.hidden {
+    display: none;
+}
