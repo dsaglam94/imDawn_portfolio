@@ -13,21 +13,23 @@
     color: $color__accent;
     position: absolute;
     bottom: 25px;
-    right: 5%;
+    right: 3%;
     animation: scroll 3s infinite;
     transition: scroll .25s ease-out;
     cursor: pointer;
+    z-index: 5;
 }
 
 .chevron-up {
     color: $color__primary;
     position: absolute;
     bottom: 25px;
-    left: 5%;
+    left: 3%;
     opacity: .8;
     animation: scroll 3s infinite;
     transition: scroll .25s ease-out;
     cursor: pointer;
+    z-index: 5;
 }
 
 
