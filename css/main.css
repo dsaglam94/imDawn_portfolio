@@ -425,7 +425,7 @@
   text-shadow: 3px 3px 1px #F3BE00;
 }
 
-@media (max-width: 1100px) {
+@media screen and (max-width: 1100px) {
   .about__details {
     flex-direction: column;
   }
@@ -459,7 +459,7 @@
     bottom: 0;
   }
 }
-@media (max-width: 670px) {
+@media screen and (max-width: 670px) {
   .header .menu-toggle {
     display: flex;
   }
@@ -546,7 +546,7 @@
     display: none;
   }
 }
-@media (max-width: 378px) {
+@media screen and (max-width: 378px) {
   .home .home__title {
     font-size: 1.8rem;
   }

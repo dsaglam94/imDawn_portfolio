@@ -5,19 +5,19 @@
 }
 
 @mixin mq-large {
-    @media (max-width: 1100px) {
+    @media screen and (max-width: 1100px) {
         @content;
     }
 }
 
 @mixin mq-medium {
-    @media (max-width: 670px) {
+    @media screen and (max-width: 670px) {
         @content;
     }
 }
 
 @mixin mq-small {
-    @media (max-width: 378px) {
+    @media screen and (max-width: 378px) {
         @content;
     }
 }
