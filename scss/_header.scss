@@ -15,7 +15,7 @@
 
     &__logo {
         font-weight: map-get($font__weigths , bold );
-        font-size: 1.75rem;
+        font-size: 1.25rem;
         color: $color__black;
 
         &.dark {
@@ -24,7 +24,7 @@
 
         &--accent {
             color: $color__accent;
-            font-size: 1.5rem;
+            font-size: 1.125rem;
         }
     }
 
